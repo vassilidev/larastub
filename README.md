@@ -1,4 +1,4 @@
-# Create and manage permission and roles for your user !
+# Create easily multiple file from stubs in a second !
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vassilidev/larastub.svg?style=flat-square)](https://packagist.org/packages/vassilidev/larastub)
 [![Total Downloads](https://img.shields.io/packagist/dt/vassilidev/larastub.svg?style=flat-square)](https://packagist.org/packages/vassilidev/larastub)
