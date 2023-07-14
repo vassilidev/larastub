@@ -1,6 +1,6 @@
 {
     "name": "vassilidev/larastub",
-    "description": "Create easily file from stubs in a second !",
+    "description": "Create easily multiple file from stubs in a second !",
     "license": "MIT",
     "keywords": [
         "vassilidev",
@@ -37,6 +37,12 @@
         }
     },
     "require": {
-        "vassilidev/stubbify": "^1.0"
+        "vassilidev/stubbify": "^1.0",
+        "php": "^7.4|^8.0",
+        "illuminate/auth": "^8.0|^9.0|^10.0",
+        "illuminate/container": "^8.0|^9.0|^10.0",
+        "illuminate/contracts": "^8.0|^9.0|^10.0",
+        "illuminate/database": "^8.0|^9.0|^10.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
     }
 }
