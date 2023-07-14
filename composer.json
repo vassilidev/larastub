@@ -1,0 +1,42 @@
+{
+    "name": "vassilidev/larastub",
+    "description": "Create easily file from stubs in a second !",
+    "license": "MIT",
+    "keywords": [
+        "vassilidev",
+        "laravel",
+        "php",
+        "stubs",
+        "stub",
+        "generator"
+    ],
+    "authors": [
+        {
+            "name": "Vassili Joffroy",
+            "email": "vassilidevnet@gmail.com",
+            "homepage": "https://vassili-joffroy.fr",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/vassilidev/larastub",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Vassilidev\\Larastub\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vassilidev\\Larastub\\LarastubServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "vassilidev/stubbify": "^1.0"
+    }
+}
