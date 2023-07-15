@@ -5,6 +5,7 @@ namespace Vassilidev\Larastub;
 use Illuminate\Support\ServiceProvider;
 use Vassilidev\Larastub\Commands\InstallLarastubCommand;
 use Vassilidev\Larastub\Commands\LarastubExecuteCommand;
+use Vassilidev\Larastub\Commands\MakeStubCommand;
 use Vassilidev\Larastub\Commands\UninstallLarastubCommand;
 
 class LarastubServiceProvider extends ServiceProvider
@@ -14,14 +15,6 @@ class LarastubServiceProvider extends ServiceProvider
         $this->offerPublishing();
 
         $this->registerCommands();
-    }
-
-    public function register(): void
-    {
-        $this->mergeConfigFrom(
-            __DIR__ . '/../config/larastub.php',
-            'larastub'
-        );
     }
 
     protected function offerPublishing(): void
@@ -50,6 +43,15 @@ class LarastubServiceProvider extends ServiceProvider
             InstallLarastubCommand::class,
             UninstallLarastubCommand::class,
             LarastubExecuteCommand::class,
+            MakeStubCommand::class,
         ]);
+    }
+
+    public function register(): void
+    {
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/larastub.php',
+            'larastub'
+        );
     }
 }
