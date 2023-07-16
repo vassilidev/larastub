@@ -67,6 +67,10 @@ class LarastubExecuteCommand extends Command
 
     private function askOptionalStep(Step $step): void
     {
+        if (!app()->runningInConsole()) {
+            return;
+        }
+
         $shouldBeGenerated = $this->confirm(
             sprintf(
                 'Do you want to generate the %s file ?',

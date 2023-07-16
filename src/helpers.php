@@ -1,5 +1,7 @@
 <?php
 
+use Vassilidev\Larastub\Facades\Larastub;
+
 if (!function_exists('template_path')) {
     function template_path($path = ''): string
     {
@@ -15,5 +17,12 @@ if (!function_exists('resolveStubPath')) {
         )
             ? $customPath
             : dirname(__DIR__) . '/stubs/' . $stub;
+    }
+}
+
+if (!function_exists('larastub')) {
+    function larastub(string $templateName, ...$args): void
+    {
+        Larastub::execute(...func_get_args());
     }
 }

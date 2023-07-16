@@ -33,7 +33,10 @@
         "laravel": {
             "providers": [
                 "Vassilidev\\Larastub\\LarastubServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Larastub": "Vassilidev\\Larastub\\Facades\\Larastub"
+            }
         }
     },
     "require": {
