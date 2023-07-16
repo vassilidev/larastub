@@ -21,8 +21,8 @@ if (!function_exists('resolveStubPath')) {
 }
 
 if (!function_exists('larastub')) {
-    function larastub(string $templateName, ...$args): void
+    function larastub(string $templateName, $args): void
     {
-        Larastub::execute(...func_get_args());
+        Larastub::execute($templateName, $args);
     }
 }

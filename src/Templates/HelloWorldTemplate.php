@@ -10,10 +10,6 @@ class HelloWorldTemplate extends Template
 {
     public string $templateName = 'hello-world';
 
-    /**
-     * @throws OutputFileAlreadyExistException
-     * @throws FileNotFoundException
-     */
     public function steps(): array
     {
         return [

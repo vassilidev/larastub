@@ -14,7 +14,7 @@ class LarastubExecuteCommand extends Command
 {
     public function __construct()
     {
-        $this->signature = config('larastub.signature') . ' {templateName}';
+        $this->signature = config('larastub.signature') . ' {templateName} {options?*}';
 
         parent::__construct();
     }
@@ -39,6 +39,19 @@ class LarastubExecuteCommand extends Command
         }
 
         $template = new $allTemplatesNames[$templateName];
+
+        $args = [];
+
+        foreach ($this->argument('options') as $key => $value) {
+            if (str_contains($value, '=')) {
+                $argParts = explode('=', $value);
+                $args[$argParts[0]] = $argParts[1];
+            } else {
+                $args[$key] = $value;
+            }
+        }
+
+        $template->setArgs($args);
 
         if (!is_a($template, Template::class)) {
             throw new TemplateFileMustImplementLarastubTemplateException($allTemplatesNames[$templateName]);

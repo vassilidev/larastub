@@ -17,7 +17,7 @@ class Larastub
         $this->app = app();
     }
 
-    public function execute($templateName, ...$args): void
+    public function execute($templateName, $args): void
     {
         $args['templateName'] = $templateName;
 
