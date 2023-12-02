@@ -3,6 +3,7 @@
 namespace Vassilidev\Larastub;
 
 use Illuminate\Support\ServiceProvider;
+use Vassilidev\Larastub\Commands\ImportStubsCommand;
 use Vassilidev\Larastub\Commands\InstallLarastubCommand;
 use Vassilidev\Larastub\Commands\LarastubExecuteCommand;
 use Vassilidev\Larastub\Commands\MakeStubCommand;
@@ -44,6 +45,7 @@ class LarastubServiceProvider extends ServiceProvider
             UninstallLarastubCommand::class,
             LarastubExecuteCommand::class,
             MakeStubCommand::class,
+            ImportStubsCommand::class,
         ]);
     }
 
